@@ -1,0 +1,44 @@
+{
+	"name": "g102-python-help",
+	"displayName": "g102-python-help",
+	"description": "g102-python-help for VS Code",
+	"version": "0.0.4",
+	"publisher": "yujiaxun",
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [],
+	"main": "./out/extension.js",
+	"contributes": {
+		"keybindings": [
+      {
+        "command": "my-extension.activate",
+        "key": "ctrl+f7",
+        "when": "editorTextFocus"
+      }
+    ],
+	"commands": [
+    {
+      "command": "my-extension.activate",
+      "title": "My Command"
+    }
+  ]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint \"src/**/*.ts\"",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^16.18.34",
+		"@types/vscode": "^1.60.0",
+		"@typescript-eslint/eslint-plugin": "^6.7.0",
+		"@typescript-eslint/parser": "^6.7.0",
+		"eslint": "^8.26.0",
+		"typescript": "^5.3.2"
+	}
+}
